@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 class DateTogglePage extends StatefulWidget {
-  const DateTogglePage({Key? key}) : super(key: key);
+  const DateTogglePage({super.key});
 
   @override
   _DateTogglePageState createState() => _DateTogglePageState();
@@ -57,7 +57,7 @@ class _DateTogglePageState extends State<DateTogglePage> {
         height: MediaQuery.of(context).size.height * 0.6,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 223, 174, 174),
+          color: const Color.fromARGB(255, 233, 222, 228),
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
@@ -76,7 +76,7 @@ class _DateTogglePageState extends State<DateTogglePage> {
               const Text(
                 "Scorpio",
   
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 163, 92, 175),),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 103, 80, 164),),
               ),
               const Divider(
                 color: Colors.black,
@@ -88,24 +88,24 @@ class _DateTogglePageState extends State<DateTogglePage> {
               ToggleButtons(
                 borderRadius: BorderRadius.circular(10),
                 isSelected: List.generate(3, (index) => _selectedIndex == index),
-                color: const Color.fromARGB(255, 151, 151, 151),
+                color: const Color.fromARGB(255, 177, 152, 180),
                 onPressed: _onItemTapped,
                 children: const <Widget>[
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: Text("Yesterday", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    child: Text("Yesterday", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: Text("Today", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),) // Change font size here
+                    child: Text("Today", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),) // Change font size here
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: Text("Tomorrow", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    child: Text("Tomorrow", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                   ),
                 ],
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 45),
               Expanded(
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -115,6 +115,7 @@ class _DateTogglePageState extends State<DateTogglePage> {
                   ),
                 ),
               ),
+              const SizedBox(height: 45),
             ],
           ),
         ),
