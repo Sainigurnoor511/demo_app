@@ -75,7 +75,8 @@ class _DateTogglePageState extends State<DateTogglePage> {
               const SizedBox(height: 20),
               const Text(
                 "Scorpio",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+  
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 163, 92, 175),),
               ),
               const Divider(
                 color: Colors.black,
@@ -87,6 +88,7 @@ class _DateTogglePageState extends State<DateTogglePage> {
               ToggleButtons(
                 borderRadius: BorderRadius.circular(10),
                 isSelected: List.generate(3, (index) => _selectedIndex == index),
+                color: const Color.fromARGB(255, 151, 151, 151),
                 onPressed: _onItemTapped,
                 children: const <Widget>[
                   Padding(
